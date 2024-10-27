@@ -1,0 +1,155 @@
+/* Base button styles */
+.wallet-adapter-button {
+    background: linear-gradient(to right, #ec4899, #f472b6) !important;
+    color: white !important;
+    padding: 0.75rem 2rem !important;
+    border-radius: 0.5rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    transition: all 0.3s !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0.5rem 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Hover effect */
+.wallet-adapter-button:hover {
+    background: linear-gradient(to right, #be185d, #db2777) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25) !important;
+}
+
+/* Active state */
+.wallet-adapter-button:active {
+    transform: translateY(0) !important;
+}
+
+/* Main connect button specific styles */
+.wallet-adapter-button-trigger {
+    background: transparent !important;
+    border: 2px solid #ec4899 !important;
+    color: #ec4899 !important;
+}
+
+.wallet-adapter-button-trigger:hover {
+    background: #ec4899 !important;
+    color: white !important;
+}
+
+/* Individual wallet buttons in modal */
+.wallet-adapter-button:not(.wallet-adapter-button-trigger) {
+    background: transparent !important;
+    border: 2px solid rgba(236, 72, 153, 0.2) !important;
+    color: #ec4899 !important;
+    margin: 0.5rem 0 !important;
+}
+
+.wallet-adapter-button:not(.wallet-adapter-button-trigger):hover {
+    background: rgba(236, 72, 153, 0.1) !important;
+    border-color: rgba(236, 72, 153, 0.4) !important;
+}
+
+/* Modal wrapper styles */
+.wallet-adapter-modal-wrapper {
+    background: linear-gradient(to bottom, #18181b, #27272a) !important;
+    border: 2px solid rgba(236, 72, 153, 0.2) !important;
+    border-radius: 1rem !important;
+    padding: 2rem !important;
+    max-width: 28rem !important;
+    width: 100% !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* Modal title */
+.wallet-adapter-modal-title {
+    color: #ec4899 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* Modal list container */
+.wallet-adapter-modal-list {
+    margin: 1rem 0 !important;
+    gap: 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Button list item */
+.wallet-adapter-modal-list-item {
+    border-radius: 0.5rem !important;
+    transition: all 0.3s !important;
+}
+
+/* Modal middle section */
+.wallet-adapter-modal-middle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 1rem 0 !important;
+    padding: 1rem 0 !important;
+    border-top: 1px solid rgba(236, 72, 153, 0.2) !important;
+    border-bottom: 1px solid rgba(236, 72, 153, 0.2) !important;
+}
+
+/* Modal button content */
+.wallet-adapter-button-start-icon {
+    margin-right: 0.75rem !important;
+}
+
+/* Dark mode specific adjustments */
+[data-theme='dark'] .wallet-adapter-modal-wrapper {
+    background: linear-gradient(to bottom, #09090b, #18181b) !important;
+}
+
+[data-theme='dark'] .wallet-adapter-button-trigger {
+    border-color: #ec4899 !important;
+    color: #ec4899 !important;
+}
+
+[data-theme='dark'] .wallet-adapter-button:not(.wallet-adapter-button-trigger) {
+    border-color: rgba(236, 72, 153, 0.3) !important;
+    color: #ec4899 !important;
+}
+
+/* Close button */
+.wallet-adapter-modal-button-close {
+    background: transparent !important;
+    border: none !important;
+    position: absolute !important;
+    right: 1rem !important;
+    top: 1rem !important;
+    color: #ec4899 !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s !important;
+}
+
+.wallet-adapter-modal-button-close:hover {
+    opacity: 1 !important;
+}
+
+/* Loading animation */
+.wallet-adapter-spinner {
+    border: 3px solid rgba(236, 72, 153, 0.2) !important;
+    border-top-color: #ec4899 !important;
+    animation: wallet-adapter-spin 1s infinite linear !important;
+}
+
+@keyframes wallet-adapter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
